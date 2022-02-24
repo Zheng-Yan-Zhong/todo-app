@@ -4,6 +4,7 @@ import {
   Input,
   ListStore
 } from './style'
+import { BiMessageSquareAdd } from 'react-icons/bi'
 import { useSelector } from 'react-redux'
 import { AiOutlineDelete } from 'react-icons/ai'
 function List() {
@@ -56,7 +57,8 @@ function List() {
           </li>)
         })}
       </ListStore>
-      <p style={{backgroundColor: "white"}}>您目前還有＄{lists.length} 個排程未完成呦！！！</p>
+      {lists.length !== 0 ? <p style={{backgroundColor: "white"}}>您目前還有{lists.length} 個排程未完成呦！！！</p> 
+      : <p><BiMessageSquareAdd />add something</p>}
     </ListContainer>
   )
 }
