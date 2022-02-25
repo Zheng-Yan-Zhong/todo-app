@@ -8,6 +8,7 @@ import { BiMessageSquareAdd } from 'react-icons/bi'
 import { useSelector } from 'react-redux'
 import { AiOutlineDelete } from 'react-icons/ai'
 function List() {
+  
   const created = new Date().toLocaleString()
   const theme = useSelector((state) => state.theme.value)
   const [text, setText] = useState('') 
