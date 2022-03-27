@@ -25,6 +25,8 @@ function List() {
     }      
     setText('')
   }
+  
+
 
   function remove(targetIndex) {
     setLists(lists.filter((item, index) => index !== targetIndex))
@@ -46,7 +48,7 @@ function List() {
       <h2>Todo APP</h2>
       <Input>
         <input type="text" onChange={(e) => setText(e.target.value)} value={text} placeholder='add item' />
-        <button  onClick={addItem}>add item</button>
+        <button  onClick={addItem} >add item</button>
       </Input>
       <ListStore>
         {lists.length !== 0 && lists.map((item, index) => {
